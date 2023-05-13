@@ -1,0 +1,60 @@
+.navbar {
+  background-color: #f1f3ff;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.offcanvas-size-sm {
+  --bs-offcanvas-width: min(95vw, 250px) !important;
+}
+
+.nav-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-item .nav-link {
+  font-weight: 400;
+  color: black;
+}
+
+.text-700 {
+  font-weight: 700;
+}
+
+.footer {
+  margin: 100px 0px 100px 0px;
+}
+
+.footer p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #000;
+}
+
+p.p-href {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer img {
+  margin-right: 10px;
+  margin-bottom: 16px;
+}
+
+/* =========Etc============ */
+
+.w-90 {
+  width: 85%;
+}

@@ -1,0 +1,23 @@
+/* @import url("https://fonts.cdnfonts.com/css/helvetica-255"); */
+
+@font-face {
+  font-family: Helvetica;
+  font-weight: 400;
+  src: url(./assets/font/Helvetica.ttf);
+}
+
+#root {
+  font-family: "Helvetica";
+  padding: 0;
+  margin-left: 0;
+}
+
+.btn-primary {
+  background-color: #5cb85f;
+  border: #5cb85f solid 1px;
+}
+
+.btn-primary:hover {
+  background-color: #5cb85f;
+  border: #f1f3ff solid 1px;
+}
