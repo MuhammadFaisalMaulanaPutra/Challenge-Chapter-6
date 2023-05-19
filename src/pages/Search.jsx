@@ -32,17 +32,18 @@ function Search() {
   };
 
   const filter = (data) => {
-    if (capacity != 0 && type.length != 0) {
-      return data.filter(
-        (item) => String(item.available) == type && item.capacity >= capacity
-      );
+    if (capacity != 0 || type.length != 0) {
+      var filtering = data
+        .filter((item) => String(item.available) == type)
+        .filter((item) => item.capacity >= capacity);
+
+      if (filtering.length == 0) {
+        return ["DataKosong"];
+      }
+
+      return filtering;
     }
-    if (capacity != 0) {
-      return data.filter((item) => item.capacity >= capacity);
-    }
-    if (type.length != 0) {
-      return data.filter((item) => String(item.available) == type);
-    }
+
     return [];
   };
   return (
@@ -111,7 +112,7 @@ function Search() {
                   </select>
                 </div>
                 <div className="col-md-3">
-                  <label>Jumlah Penumpang(opsional)</label>
+                  <label>Jumlah Penumpang</label>
                   <input
                     type="number"
                     className="form-control"
