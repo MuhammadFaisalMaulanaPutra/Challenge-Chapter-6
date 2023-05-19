@@ -2,6 +2,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./style.css";
+import { Helmet } from "react-helmet";
 import Car from "../assets/mobil.png";
 import Service from "../assets/service.png";
 import Check from "../assets/check.png";
@@ -15,6 +16,9 @@ import Photo2 from "../assets/photo2.png";
 function Home() {
   return (
     <>
+      <Helmet>
+        <title>BCR | Home</title>
+      </Helmet>
       <section className="hero" id="hero">
         <div className="container">
           <div className="row align-items-center">
@@ -139,7 +143,7 @@ function Home() {
           center
           mergeFit
           navText={[
-            `<img src='src/assets/left-btn.png'>`,
+            "<img src='src/assets/left-btn.png'>",
             "<img src='src/assets/right-btn.png'>",
           ]}
         >
@@ -244,21 +248,21 @@ function Home() {
           </div>
         </section>
 
-        <section class="faq" id="faq">
-          <div class="row">
-            <div class="col-md-5">
-              <h1 class="title">Frequently Asked Question</h1>
-              <p class="sub-title">
+        <section className="faq" id="faq">
+          <div className="row">
+            <div className="col-md-5">
+              <h1 className="title">Frequently Asked Question</h1>
+              <p className="sub-title">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </p>
             </div>
-            <div class="col-md-7">
+            <div className="col-md-7">
               <div id="accordionExample">
-                <div class="accordion mb-4">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
+                <div className="accordion mb-4">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingOne">
                       <button
-                        class="accordion-button collapsed"
+                        className="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseOne"
@@ -270,11 +274,11 @@ function Home() {
                     </h2>
                     <div
                       id="collapseOne"
-                      class="accordion-collapse collapse"
+                      className="accordion-collapse collapse"
                       aria-labelledby="headingOne"
                       data-bs-parent="#accordionExample"
                     >
-                      <div class="accordion-body">
+                      <div className="accordion-body">
                         <p>
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Amet, commodi tenetur architecto sequi sunt
@@ -289,11 +293,11 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div class="accordion mb-4">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
+                <div className="accordion mb-4">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingTwo">
                       <button
-                        class="accordion-button collapsed"
+                        className="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo"
@@ -305,11 +309,11 @@ function Home() {
                     </h2>
                     <div
                       id="collapseTwo"
-                      class="accordion-collapse collapse"
+                      className="accordion-collapse collapse"
                       aria-labelledby="headingTwo"
                       data-bs-parent="#accordionExample"
                     >
-                      <div class="accordion-body">
+                      <div className="accordion-body">
                         <p>
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Amet, commodi tenetur architecto sequi sunt
@@ -324,11 +328,11 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div class="accordion mb-4">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
+                <div className="accordion mb-4">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingThree">
                       <button
-                        class="accordion-button collapsed"
+                        className="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseThree"
@@ -340,11 +344,11 @@ function Home() {
                     </h2>
                     <div
                       id="collapseThree"
-                      class="accordion-collapse collapse"
+                      className="accordion-collapse collapse"
                       aria-labelledby="headingThree"
                       data-bs-parent="#accordionExample"
                     >
-                      <div class="accordion-body">
+                      <div className="accordion-body">
                         <p>
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Amet, commodi tenetur architecto sequi sunt
@@ -359,11 +363,11 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div class="accordion mb-4">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
+                <div className="accordion mb-4">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingFour">
                       <button
-                        class="accordion-button collapsed"
+                        className="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseFour"
@@ -375,11 +379,11 @@ function Home() {
                     </h2>
                     <div
                       id="collapseFour"
-                      class="accordion-collapse collapse"
+                      className="accordion-collapse collapse"
                       aria-labelledby="headingFour"
                       data-bs-parent="#accordionExample"
                     >
-                      <div class="accordion-body">
+                      <div className="accordion-body">
                         <p>
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Amet, commodi tenetur architecto sequi sunt
@@ -394,11 +398,11 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div class="accordion mb-4">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFive">
+                <div className="accordion mb-4">
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingFive">
                       <button
-                        class="accordion-button collapsed"
+                        className="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseFive"
@@ -410,11 +414,11 @@ function Home() {
                     </h2>
                     <div
                       id="collapseFive"
-                      class="accordion-collapse collapse"
+                      className="accordion-collapse collapse"
                       aria-labelledby="headingFive"
                       data-bs-parent="#accordionExample"
                     >
-                      <div class="accordion-body">
+                      <div className="accordion-body">
                         <p>
                           Lorem ipsum dolor sit amet consectetur adipisicing
                           elit. Amet, commodi tenetur architecto sequi sunt

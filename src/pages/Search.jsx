@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import axios from "axios";
 import "./style.css";
 import Car from "../assets/mobil.png";
@@ -8,8 +9,8 @@ import Card from "./Card";
 function Search() {
   //define state
   const [cars, setCars] = useState([]);
-  const [capacity, setCapacity] = useState([]);
-  const [type, setType] = useState([]);
+  const [capacity, setCapacity] = useState(0);
+  const [type, setType] = useState("");
 
   //useEffect hook
   useEffect(() => {
@@ -31,21 +32,24 @@ function Search() {
   };
 
   const filter = (data) => {
-    if (capacity.length != 0 && type.length != 0) {
+    if (capacity != 0 && type.length != 0) {
       return data.filter(
-        (item) => String(item.available) == type && item.capacity == capacity
+        (item) => String(item.available) == type && item.capacity >= capacity
       );
     }
-    if (capacity.length != 0) {
-      return data.filter((item) => item.capacity == capacity);
+    if (capacity != 0) {
+      return data.filter((item) => item.capacity >= capacity);
     }
     if (type.length != 0) {
       return data.filter((item) => String(item.available) == type);
     }
-    return data;
+    return [];
   };
   return (
     <>
+      <Helmet>
+        <title>BCR | Search Cars</title>
+      </Helmet>
       <section className="hero" id="hero">
         <div className="container">
           <div className="row align-items-center">
@@ -73,7 +77,7 @@ function Search() {
                     id="driverType"
                     onChange={(e) => setType(e.target.value)}
                   >
-                    <option value="" hidden>
+                    <option defaultValue="" hidden>
                       Pilih Tipe Driver
                     </option>
                     <option value="true">Dengan Sopir</option>
@@ -96,7 +100,7 @@ function Search() {
                     className="form-select"
                     aria-label="Default select example"
                   >
-                    <option disable selected hidden>
+                    <option defaultValue="" hidden>
                       Pilih Waktu
                     </option>
                     <option value="">08.00</option>
@@ -120,8 +124,7 @@ function Search() {
           </div>
         </div>
       </section>
-
-      <Card data={filter(cars)} />
+      {<Card data={filter(cars)} />}
     </>
   );
 }

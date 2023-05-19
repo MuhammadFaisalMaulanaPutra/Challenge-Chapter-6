@@ -1,4 +1,3 @@
-import React from "react";
 import "./style.css";
 import Capacity from "../assets/fi_users.png";
 import Setting from "../assets/fi_settings.png";
@@ -21,12 +20,20 @@ function Card({ data }) {
                     <h5 className="card-title">
                       {car.manufacture} {car.model}
                     </h5>
-                    <h2 className="card-price">Rp. {car.rentPerDay}</h2>
+                    <h2 className="card-price">
+                      Rp.{" "}
+                      {new Intl.NumberFormat("en-DE").format(car.rentPerDay)}
+                    </h2>
                     <p className="card-text">
+                      {car.available
+                        ? "Dengan Sopir"
+                        : "Tanpa Sopir(Lepas Kunci)"}
+                      <br />
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua.
                     </p>
+
                     <ul className="card-detail">
                       <li>
                         <img src={Capacity} alt="" /> {car.capacity} Orang
@@ -43,9 +50,7 @@ function Card({ data }) {
                         href="#"
                         className="btn btn-primary"
                         type="button"
-                        style={
-                            {height: 48}
-                        }
+                        style={{ height: 48 }}
                       >
                         Pilih Mobil
                       </button>
